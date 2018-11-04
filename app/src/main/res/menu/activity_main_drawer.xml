@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/grpMenuDashboard" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+
+    </group>
+
+    <group android:id="@+id/grpMenuCadastro">
+        <item android:title="Cadastro">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_empresa"
+                        android:icon="@drawable/ic_shop"
+                        android:title="Empresa" />
+                    <item
+                        android:id="@+id/nav_colaboradores"
+                        android:icon="@drawable/ic_team"
+                        android:title="Colaboradores" />
+                    <item
+                        android:id="@+id/nav_produtos"
+                        android:icon="@drawable/ic_price"
+                        android:title="Produtos" />
+                    <item
+                        android:id="@+id/nav_ambiente_mesa"
+                        android:icon="@drawable/ic_chair"
+                        android:title="Ambientes e mesa" />
+                    <item
+                        android:id="@+id/nav_menu_preco"
+                        android:icon="@drawable/ic_menu_restaurant"
+                        android:title="Menu" />
+                </group>
+            </menu>
+        </item>
+    </group>
+    <group android:id="@+id/grpMenuFooter" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sobre"
+            android:icon="@drawable/ic_turned_off"
+            android:title="Sobre o aplicativo" />
+    </group>
+</menu>
