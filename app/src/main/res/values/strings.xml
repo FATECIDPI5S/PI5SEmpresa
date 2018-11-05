@@ -8,4 +8,12 @@
     <string name="action_settings">Definições</string>
     <string name="title_activity_empresa">Empresa</string>
     <string name="title_activity_colaboradores">Colaboradores</string>
+    <string name="edtEmail">E-mail</string>
+    <string name="edtSenha">Senha</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="tvCadastrar">Ainda não tem conta? Crie uma.</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="edtNome">Nome</string>
+    <string name="edtSenhaNovamente">Digite novamente a senha</string>
+    <string name="btnInscreverSe">Criar Conta</string>
 </resources>
