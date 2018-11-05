@@ -9,41 +9,51 @@
     android:paddingRight="24dp"
     tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/edtEmail"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/edtEmail"
-        android:inputType="textEmailAddress" />
+        android:layout_marginBottom="8dp">
 
-    <EditText
-        android:id="@+id/edtSenha"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edtEmail"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/edtSenha"
-        android:inputType="textPassword" />
+        android:layout_marginBottom="8dp">
 
-    <android.support.v7.widget.AppCompatButton
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edtSenha"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnEntrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        android:onClick="abrirHome"
         android:padding="12dp"
-        android:text="@string/btnEntrar" />
+        android:onClick="abrirHome"
+        android:text="@string/btnEntrar"/>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvCadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="16sp"
         android:onClick="abrirSignUp"
-        android:text="@string/tvCadastrar"
-        android:textSize="16sp" />
+        android:text="@string/tvCadastrar"/>
 
 </LinearLayout>
