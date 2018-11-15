@@ -15,17 +15,17 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvApresentacao"
+            android:id="@+id/tvSobreApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aplicativo desenvolvido para o Projeto Disciplinar do 5º Semestre do curso de Tecnologia em Analise e Desenvolvimento de Sistemas da faculdade de Tecnologia de Indaiatuba (FATEC-ID)" />
+            android:text="@string/tvSobreApp" />
 
         <TextView
-            android:id="@+id/tvParticipantes"
+            android:id="@+id/tvParticipantesApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Participantes do Projeto:" />
+            android:text="@string/tvParticipantesApp" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvGabriel"
@@ -53,15 +53,17 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvTGabriel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Gabriel"
+                        android:text="@string/tvTGabriel"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
 
                     <TextView
+                        android:id="@+id/tvSGabriel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estudande na Fatec Indaiatuba"
+                        android:text="@string/tvSGabriel"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
                 </LinearLayout>
             </LinearLayout>
@@ -93,15 +95,17 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvTGuilherme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Guilherme Pedrozo Abacherli"
+                        android:text="@string/tvTGuilherme"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
 
                     <TextView
+                        android:id="@+id/tvSGuilherme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estudande na Fatec Indaiatuba"
+                        android:text="@string/tvSGuilherme"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
                 </LinearLayout>
             </LinearLayout>
@@ -133,15 +137,17 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvTJean"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Jean Carlos de Souza"
+                        android:text="@string/tvTJean"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
 
                     <TextView
+                        android:id="@+id/tvSJean"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estudande na Fatec Indaiatuba"
+                        android:text="@string/tvSJean"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
                 </LinearLayout>
             </LinearLayout>
@@ -163,7 +169,7 @@
                     android:layout_width="44dp"
                     android:layout_height="48dp"
                     android:maxWidth="30dp"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:src="@drawable/img_jefferson" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -173,15 +179,17 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvTJefferson"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Jefferson Lopes dos Santos Ribeiro"
+                        android:text="@string/tvTJefferson"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
 
                     <TextView
+                        android:id="@+id/tvSJefferson"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estudande na Fatec Indaiatuba"
+                        android:text="@string/tvSJefferson"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
                 </LinearLayout>
             </LinearLayout>
@@ -213,15 +221,17 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvTMarina"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Marina"
+                        android:text="@string/tvTMarina"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
 
                     <TextView
+                        android:id="@+id/tvSMarina"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estudande na Fatec Indaiatuba"
+                        android:text="@string/tvSMarina"
                         android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
                 </LinearLayout>
             </LinearLayout>
