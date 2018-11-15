@@ -7,42 +7,46 @@
         <item
             android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_dashboard"
-            android:title="Dashboard" />
-
+            android:title="@string/nav_dashboard" />
     </group>
 
     <group android:id="@+id/grpMenuCadastro">
-        <item android:title="Cadastro">
+        <item android:title="@string/grpMenuCadastro">
             <menu>
                 <group android:checkableBehavior="single">
                     <item
                         android:id="@+id/nav_empresa"
                         android:icon="@drawable/ic_shop"
-                        android:title="Empresa" />
+                        android:title="@string/nav_empresa" />
                     <item
                         android:id="@+id/nav_colaboradores"
                         android:icon="@drawable/ic_team"
-                        android:title="Colaboradores" />
+                        android:title="@string/nav_colaboradores" />
                     <item
                         android:id="@+id/nav_produtos"
                         android:icon="@drawable/ic_price"
-                        android:title="Produtos" />
+                        android:title="@string/nav_produtos" />
                     <item
                         android:id="@+id/nav_ambiente_mesa"
                         android:icon="@drawable/ic_chair"
-                        android:title="Ambientes e mesa" />
+                        android:title="@string/nav_ambiente_mesa" />
                     <item
                         android:id="@+id/nav_menu_preco"
                         android:icon="@drawable/ic_menu_restaurant"
-                        android:title="Menu" />
+                        android:title="@string/nav_menu_preco" />
                 </group>
             </menu>
         </item>
     </group>
+
     <group android:id="@+id/grpMenuFooter" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_configuracoes"
+            android:icon="@drawable/ic_settings_grey_24dp"
+            android:title="@string/nav_configuracoes" />
         <item
             android:id="@+id/nav_sobre"
             android:icon="@drawable/ic_turned_off"
-            android:title="Sobre o aplicativo" />
+            android:title="@string/nav_sobre" />
     </group>
 </menu>

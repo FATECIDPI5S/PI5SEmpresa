@@ -1,19 +1,86 @@
 <resources>
     <string name="app_name">iComidaEmpresa</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Restaurante FATEC</string>
-    <string name="nav_header_subtitle">restaurante@fatec.sp.gov.br</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Definições</string>
-    <string name="title_activity_empresa">Empresa</string>
-    <string name="title_activity_colaboradores">Colaboradores</string>
+
+    <!-- USADO EM VARIOS-->
     <string name="edtEmail">E-mail</string>
     <string name="edtSenha">Senha</string>
+    <string name="edtSenhaNovamente">Digite novamente a senha</string>
+    <string name="edtNome">Nome</string>
+    <string name="btnAdicionar">Adicionar</string>
+    <string name="btnVoltar">Voltar</string>
+    <string name="edtContato">Contato</string>
+    <string name="edtTipoContato">Tipo</string>
+    <string name="edtEndereco">Endereço</string>
+
+    <!-- ACTIVITY LOGIN-->
     <string name="btnEntrar">Entrar</string>
     <string name="tvCadastrar">Ainda não tem conta? Crie uma.</string>
-    <string name="title_activity_sign_up">SignUpActivity</string>
-    <string name="edtNome">Nome</string>
-    <string name="edtSenhaNovamente">Digite novamente a senha</string>
+
+    <!-- CONTENT SIGN_UP-->
+    <string name="title_activity_sign_up">Cadastre-se</string>
     <string name="btnInscreverSe">Criar Conta</string>
+
+    <!-- NAVIGATION DRAWER-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Restaurante FATEC</string>
+    <string name="nav_header_subtitle">restaurante@fatec.sp.gov.br</string>
+    <string name="nav_dashboard">Acompanhamento</string>
+    <string name="grpMenuCadastro">Cadastro</string>
+    <string name="nav_empresa">Empresa</string>
+    <string name="nav_colaboradores">Colaboradores</string>
+    <string name="nav_produtos">Produtos</string>
+    <string name="nav_ambiente_mesa">Ambientes e Mesa</string>
+    <string name="nav_menu_preco">Menu</string>
+    <string name="nav_sobre">Sobre o aplicativo</string>
+    <string name="nav_configuracoes">Configurações</string>
+
+    <!-- TOOLBAR-->
+    <string name="action_settings">Configurações</string>
+
+    <!--ACTIVITY EMPRESA-->
+    <string name="title_activity_empresa">Adicione sua Empresa</string>
+    <string name="edtRazaoSocial">Razão Social</string>
+    <string name="edtNomeFantasia">Nome Fantasia</string>
+    <string name="edtCNPJ">CNPJ</string>
+    <string name="edtIE">IE</string>
+
+    <!--ACTIVITY COLABORADORES-->
+    <string name="title_activity_colaboradores">Adicione colaboradores</string>
+    <string name="edtRG">RG</string>
+    <string name="edtCPF">CPF</string>
+    <string name="rbGarcom">Garçom</string>
+    <string name="rbCozinha">Cozinha</string>
+
+    <!--FRAGMENT DASHBOARD-->
+    <string name="title_fragment_dashboard">Acompanhamento</string>
+
+    <!--FRAGMENT EMPRESA-->
+    <string name="title_fragment_empresa">Empresa</string>
+
+    <!--FRAGMENT COLABORADORES-->
+    <string name="title_fragment_colaboradores">Colaboradores</string>
+
+    <!--FRAGMENT PRODUTOS-->
+    <string name="title_fragment_produtos">Produtos</string>
+
+    <!--FRAGMENT AMBIENTE MESA-->
+    <string name="title_fragment_ambiente_mesa">Ambientes e Mesa</string>
+
+    <!--FRAGMENT MENU PRECO-->
+    <string name="title_fragment_menu_preco">Menu</string>
+
+    <!--FRAGMENT CONFIGURACOES-->
+    <string name="title_fragment_configuracoes">Configurações</string>
+    <string name="tvConta">Conta</string>
+    <string name="btnAlterarPerfil">Alterar Perfil</string>
+    <string name="btnAlterarSenha">Alterar Senha</string>
+    <string name="tvConfiguracoes">Configurações</string>
+    <string name="btnIdioma">Idioma</string>
+    <string name="btnSair">Sair</string>
+
+    <!--FRAGMENT SOBRE-->
+    <string name="title_fragment_sobre">Sobre o Aplicativo</string>
+
 </resources>

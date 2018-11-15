@@ -67,21 +67,37 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         Fragment mFragment = null;
 
-        if (id == R.id.nav_empresa) {
+        if (id == R.id.nav_dashboard) {
+            setTitle(R.string.title_fragment_dashboard);
+
+        } else if (id == R.id.nav_empresa) {
             mFragment = new EmpresaFragment();
+            setTitle(R.string.title_fragment_empresa);
+
         } else if (id == R.id.nav_colaboradores) {
             mFragment = new ColaboradoresFragment();
+            setTitle(R.string.title_fragment_colaboradores);
+
+        } else if (id == R.id.nav_produtos) {
+            setTitle(R.string.title_fragment_produtos);
+
         } else if (id == R.id.nav_ambiente_mesa) {
+            setTitle(R.string.title_fragment_ambiente_mesa);
 
         } else if (id == R.id.nav_menu_preco) {
+            setTitle(R.string.title_fragment_menu_preco);
+
+        } else if (id == R.id.nav_configuracoes) {
+            mFragment = new ConfiguracoesFragment();
+            setTitle(R.string.title_fragment_configuracoes);
 
         } else if (id == R.id.nav_sobre) {
-
+            mFragment = new SobreFragment();
+            setTitle(R.string.title_fragment_sobre);
         }
 
         if(mFragment != null){
