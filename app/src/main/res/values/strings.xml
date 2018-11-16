@@ -31,7 +31,7 @@
     <string name="nav_empresa">Empresa</string>
     <string name="nav_colaboradores">Colaboradores</string>
     <string name="nav_produtos">Produtos</string>
-    <string name="nav_ambiente_mesa">Ambientes e Mesa</string>
+    <string name="nav_ambiente_mesa">Ambientes e Mesas</string>
     <string name="nav_menu_preco">Menu</string>
     <string name="nav_sobre">Sobre o aplicativo</string>
     <string name="nav_configuracoes">Configurações</string>
@@ -53,6 +53,18 @@
     <string name="rbGarcom">Garçom</string>
     <string name="rbCozinha">Cozinha</string>
 
+    <!--ACTIVITY PRODUTOS-->
+    <string name="title_activity_produtos">Adicione Produtos</string>
+
+    <!--ACTIVITY AMBIENTE-->
+    <string name="title_activity_ambiente">Adicione Ambientes</string>
+
+    <!--ACTIVITY MESA-->
+    <string name="title_activity_mesa">Adicione Mesas</string>
+
+    <!--ACTIVITY MENU PRECO-->
+    <string name="title_activity_menu_preco">Adicione colaboradores</string>
+
     <!--FRAGMENT DASHBOARD-->
     <string name="title_fragment_dashboard">Visão Geral</string>
 
@@ -66,7 +78,7 @@
     <string name="title_fragment_produtos">Produtos</string>
 
     <!--FRAGMENT AMBIENTE MESA-->
-    <string name="title_fragment_ambiente_mesa">Ambientes e Mesa</string>
+    <string name="title_fragment_ambiente_mesa">Ambientes e Mesas</string>
 
     <!--FRAGMENT MENU PRECO-->
     <string name="title_fragment_menu_preco">Menu</string>

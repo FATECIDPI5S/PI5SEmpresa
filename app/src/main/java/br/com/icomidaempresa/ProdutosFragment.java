@@ -31,7 +31,7 @@ public class ProdutosFragment extends Fragment {
         fabProdutos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(getContext(), ProdutosActivity.class));
+                startActivity(new Intent(getContext(), ProdutosActivity.class));
             }
         });
 

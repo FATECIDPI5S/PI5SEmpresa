@@ -12,6 +12,7 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,12 +31,19 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EmpresaActivity"
-            android:label="@string/title_activity_empresa">
-        </activity>
+            android:label="@string/title_activity_empresa" />
         <activity
             android:name=".ColaboradoresActivity"
-            android:label="@string/title_activity_colaboradores">
-        </activity>
+            android:label="@string/title_activity_colaboradores" />
+        <activity
+            android:name=".ProdutosActivity"
+            android:label="@string/title_activity_produtos" />
+        <activity
+            android:name=".AmbienteActivity"
+            android:label="@string/title_activity_ambiente"/>
+        <activity
+            android:name=".MesaActivity"
+            android:label="@string/title_activity_mesa"/>
     </application>
 
 </manifest>

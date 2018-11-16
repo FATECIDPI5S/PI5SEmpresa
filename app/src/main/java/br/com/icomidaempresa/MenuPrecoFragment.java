@@ -14,9 +14,9 @@ import androidx.fragment.app.Fragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MenuFragment extends Fragment {
+public class MenuPrecoFragment extends Fragment {
 
-    public MenuFragment() {
+    public MenuPrecoFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class MenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu_preco, container, false);
 
         FloatingActionButton fabMenu = (FloatingActionButton) view.findViewById(R.id.fabMenu);
         fabMenu.setOnClickListener(new View.OnClickListener() {

@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity
             setTitle(R.string.title_fragment_ambiente_mesa);
 
         } else if (id == R.id.nav_menu_preco) {
+            mFragment = new MenuPrecoFragment();
             setTitle(R.string.title_fragment_menu_preco);
 
         } else if (id == R.id.nav_configuracoes) {
