@@ -54,7 +54,7 @@
     <string name="rbCozinha">Cozinha</string>
 
     <!--FRAGMENT DASHBOARD-->
-    <string name="title_fragment_dashboard">Acompanhamento</string>
+    <string name="title_fragment_dashboard">Visão Geral</string>
 
     <!--FRAGMENT EMPRESA-->
     <string name="title_fragment_empresa">Empresa</string>

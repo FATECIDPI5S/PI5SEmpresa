@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        abrirDashBoard();
     }
 
     @Override
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         Fragment mFragment = null;
 
         if (id == R.id.nav_dashboard) {
+            mFragment = new DashboardFragment();
             setTitle(R.string.title_fragment_dashboard);
 
         } else if (id == R.id.nav_empresa) {
@@ -83,9 +86,11 @@ public class MainActivity extends AppCompatActivity
             setTitle(R.string.title_fragment_colaboradores);
 
         } else if (id == R.id.nav_produtos) {
+            mFragment = new ProdutosFragment();
             setTitle(R.string.title_fragment_produtos);
 
         } else if (id == R.id.nav_ambiente_mesa) {
+            mFragment = new AmbienteMesaFragment();
             setTitle(R.string.title_fragment_ambiente_mesa);
 
         } else if (id == R.id.nav_menu_preco) {
@@ -109,5 +114,13 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void abrirDashBoard(){
+        Fragment mFragment = new DashboardFragment();
+        FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+        mFragmentTransaction.replace(R.id.mainLayout, mFragment);
+        mFragmentTransaction.commit();
+        setTitle(R.string.title_fragment_dashboard);
     }
 }
