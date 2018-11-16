@@ -24,16 +24,6 @@ public class MenuPrecoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_menu_preco, container, false);
-
-        FloatingActionButton fabMenu = (FloatingActionButton) view.findViewById(R.id.fabMenu);
-        fabMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //startActivity(new Intent(getContext(), MenuActivity.class));
-            }
-        });
-
-        return view;
+        return inflater.inflate(R.layout.fragment_menu_preco, container, false);
     }
 }
