@@ -5,13 +5,450 @@
     android:layout_height="match_parent"
     tools:context=".ColaboradoresFragment">
 
-    <TextView
-        android:id="@+id/tvColaboradores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp"
-        android:text="FRAGMENT COLABORADORES" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvGarcom1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mtrl_card_spacing">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="48dp"
+                            android:maxWidth="30dp"
+                            android:src="@drawable/ic_person_black_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="João"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Garçom"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnExcluirEmpresag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Excluir" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAlterarEmpresag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/btnExcluirEmpresag1"
+                            android:text="Alterar" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/imgbMostrarDescricaog1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_50dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCozinha1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mtrl_card_spacing">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="48dp"
+                            android:maxWidth="30dp"
+                            android:src="@drawable/ic_person_black_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gerson"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Cozinha"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnExcluirEmpresac1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Excluir" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAlterarEmpresac1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/btnExcluirEmpresac1"
+                            android:text="Alterar" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/imgbMostrarDescricaoc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_50dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCozinha2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mtrl_card_spacing">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="48dp"
+                            android:maxWidth="30dp"
+                            android:src="@drawable/ic_person_black_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Edvaldo"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Cozinha"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnExcluirEmpresa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Excluir" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAlterarEmpresa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/btnExcluirEmpresa"
+                            android:text="Alterar" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/imgbMostrarDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_50dp" />
+
+                    </RelativeLayout>
+
+                    <GridLayout
+                        android:id="@+id/glColaboradorDescricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="8">
+
+                        <TextView
+                            android:id="@+id/tvNome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Nome:" />
+
+                        <TextView
+                            android:id="@+id/tvNomeDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edvaldo" />
+
+                        <TextView
+                            android:id="@+id/tvRG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="RG:" />
+
+                        <TextView
+                            android:id="@+id/tvRGDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34.816.468-3" />
+
+                        <TextView
+                            android:id="@+id/tvCPF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="CPF:" />
+
+                        <TextView
+                            android:id="@+id/tvCPFDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="197.101.460-50" />
+
+                        <TextView
+                            android:id="@+id/tvEndereco"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Endereço:" />
+
+                        <TextView
+                            android:id="@+id/tvEnderecoDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rua dos sem dente, numero 1, bairro joaquim,  Indaiatuab-SP" />
+
+                        <TextView
+                            android:id="@+id/tvTipoContato"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Telefone:" />
+
+                        <TextView
+                            android:id="@+id/tvContato"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(19) 3421-5678" />
+
+                        <TextView
+                            android:id="@+id/tvTipoContato2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Celular:" />
+
+                        <TextView
+                            android:id="@+id/tvContato2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(19) 9090-7070" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Email:" />
+
+                        <TextView
+                            android:id="@+id/tvEmailDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="edvaulduo.eumeuil@gmail.com" />
+
+                        <TextView
+                            android:id="@+id/tvTipoColaborador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Tipo de Colaborador:" />
+
+                        <TextView
+                            android:id="@+id/tvTipoColaboradorDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cozinha" />
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvGarcom2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mtrl_card_spacing">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="48dp"
+                            android:maxWidth="30dp"
+                            android:src="@drawable/ic_person_black_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="José"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Garçom"
+                                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnExcluirEmpresag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Excluir" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAlterarEmpresag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/btnExcluirEmpresag2"
+                            android:text="Alterar" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/imgbMostrarDescricaog2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_50dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabColaboradores"

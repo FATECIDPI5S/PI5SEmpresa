@@ -55,6 +55,7 @@
 
     <!--ACTIVITY PRODUTOS-->
     <string name="title_activity_produtos">Adicione Produtos</string>
+    <string name="edtCodigo">Código</string>
 
     <!--ACTIVITY AMBIENTE-->
     <string name="title_activity_ambiente">Adicione Ambientes</string>

@@ -3,6 +3,7 @@ package br.com.icomidaempresa;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class ProdutosActivity extends AppCompatActivity {
 
@@ -10,5 +11,9 @@ public class ProdutosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produtos);
+    }
+
+    public void voltar(View v){
+        finish();
     }
 }
