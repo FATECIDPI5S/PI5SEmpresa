@@ -1,9 +1,11 @@
-package br.com.icomidaempresa;
+package br.com.icomidaempresa.view.activity;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import br.com.icomidaempresa.R;
 
 public class LoginActivity extends AppCompatActivity {
 

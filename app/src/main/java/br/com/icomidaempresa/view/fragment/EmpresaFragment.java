@@ -1,15 +1,19 @@
-package br.com.icomidaempresa;
+package br.com.icomidaempresa.view.fragment;
 
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.fragment.app.Fragment;
+import br.com.icomidaempresa.R;
+import br.com.icomidaempresa.view.activity.EmpresaActivity;
 
 
 /**
@@ -30,9 +34,9 @@ public class EmpresaFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_empresa, container, false);
 
-        FloatingActionButton fabEmpresa = (FloatingActionButton) view.findViewById(R.id.fabEmpresa);
-        glEmpresaDescricao = (GridLayout) view.findViewById(R.id.glEmpresaDescricao);
-        imgbMostrarDescricao = (ImageButton) view.findViewById(R.id.imgbMostrarDescricao);
+        FloatingActionButton fabEmpresa =  view.findViewById(R.id.fabEmpresa);
+        glEmpresaDescricao =  view.findViewById(R.id.glEmpresaDescricao);
+        imgbMostrarDescricao =  view.findViewById(R.id.imgbMostrarDescricao);
 
         glEmpresaDescricao.setVisibility(View.GONE);
 

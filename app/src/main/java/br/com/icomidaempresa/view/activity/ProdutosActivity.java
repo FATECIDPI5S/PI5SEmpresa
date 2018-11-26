@@ -1,9 +1,10 @@
-package br.com.icomidaempresa;
-
-import androidx.appcompat.app.AppCompatActivity;
+package br.com.icomidaempresa.view.activity;
 
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import br.com.icomidaempresa.R;
 
 public class ProdutosActivity extends AppCompatActivity {
 

@@ -1,14 +1,17 @@
-package br.com.icomidaempresa;
+package br.com.icomidaempresa.view.fragment;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.fragment.app.Fragment;
+import br.com.icomidaempresa.view.activity.ColaboradoresActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
+import br.com.icomidaempresa.R;
 import android.widget.ImageButton;
 
 
@@ -30,9 +33,9 @@ public class ColaboradoresFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_colaboradores, container, false);
 
-        FloatingActionButton fabColaboradores = (FloatingActionButton) view.findViewById(R.id.fabColaboradores);
-        glColaboradorDescricao = (GridLayout) view.findViewById(R.id.glColaboradorDescricao);
-        imgbMostrarDescricao = (ImageButton) view.findViewById(R.id.imgbMostrarDescricao);
+        FloatingActionButton fabColaboradores = view.findViewById(R.id.fabColaboradores);
+        glColaboradorDescricao = view.findViewById(R.id.glColaboradorDescricao);
+        imgbMostrarDescricao = view.findViewById(R.id.imgbMostrarDescricao);
 
         glColaboradorDescricao.setVisibility(View.GONE);
 

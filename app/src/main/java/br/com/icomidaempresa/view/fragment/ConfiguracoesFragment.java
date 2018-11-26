@@ -1,23 +1,21 @@
-package br.com.icomidaempresa;
+package br.com.icomidaempresa.view.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.fragment.app.Fragment;
+import br.com.icomidaempresa.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashboardFragment extends Fragment {
+public class ConfiguracoesFragment extends Fragment {
 
-    public DashboardFragment() {
+    public ConfiguracoesFragment() {
         // Required empty public constructor
     }
 
@@ -25,6 +23,6 @@ public class DashboardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        return inflater.inflate(R.layout.fragment_configuracoes, container, false);
     }
 }
