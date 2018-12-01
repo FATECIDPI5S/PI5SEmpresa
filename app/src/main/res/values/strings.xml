@@ -56,6 +56,8 @@
     <!--ACTIVITY PRODUTOS-->
     <string name="title_activity_produtos">Adicione Produtos</string>
     <string name="edtCodigo">Código</string>
+    <string name="edtPrecoVenda">Preço de Venda</string>
+    <string name="cbProdutoAdicional">Produto Adicional?</string>
 
     <!--ACTIVITY AMBIENTE-->
     <string name="title_activity_ambiente">Adicione Ambientes</string>
