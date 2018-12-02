@@ -36,15 +36,14 @@
     <string name="nav_sobre">Sobre o aplicativo</string>
     <string name="nav_configuracoes">Configurações</string>
 
-    <!-- TOOLBAR-->
-    <string name="action_settings">Configurações</string>
-
     <!--ACTIVITY EMPRESA-->
     <string name="title_activity_empresa">Adicione sua Empresa</string>
     <string name="edtRazaoSocial">Razão Social</string>
     <string name="edtNomeFantasia">Nome Fantasia</string>
     <string name="edtCNPJ">CNPJ</string>
     <string name="edtIE">IE</string>
+    <string name="edtTelefone">Telefone</string>
+    <string name="edtCelular">Celular</string>
 
     <!--ACTIVITY COLABORADORES-->
     <string name="title_activity_colaboradores">Adicione colaboradores</string>
