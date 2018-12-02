@@ -78,6 +78,8 @@
 
     <!--FRAGMENT PRODUTOS-->
     <string name="title_fragment_produtos">Produtos</string>
+    <string name="imgbProdutoEditarDescricao">Edite seu Produto</string>
+    <string name="imgbProdutoDeletarDescricao">Exclua seu produto</string>
 
     <!--FRAGMENT AMBIENTE MESA-->
     <string name="title_fragment_ambiente_mesa">Ambientes e Mesas</string>
