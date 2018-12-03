@@ -82,35 +82,33 @@
                 android:inputType="textPostalAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <GridLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:columnCount="3"
-            android:rowCount="1">
+            android:layout_marginBottom="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtTipoContato"
-                android:layout_width="80dp"
+                android:id="@+id/edtTelefone"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/edtTipoContato"
-                android:inputType="text"/>
+                android:hint="@string/edtTelefone"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtContato"
-                android:layout_width="180dp"
+                android:id="@+id/edtCelular"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/edtContato"
-                android:inputType="text" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:src="@android:drawable/ic_input_add" />
-
-        </GridLayout>
+                android:hint="@string/edtCelular"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAdicionar"
@@ -129,4 +127,5 @@
             android:text="@string/btnVoltar" />
 
     </LinearLayout>
+
 </ScrollView>

@@ -7,7 +7,6 @@
     tools:context=".EmpresaFragment">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cvEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/mtrl_card_spacing"
@@ -18,62 +17,70 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/headerCard"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="44dp"
-                    android:layout_height="48dp"
-                    android:maxWidth="30dp"
-                    android:src="@drawable/ic_store" />
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:orientation="vertical">
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/imgbAlterarEmpresa"
+                    android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="48dp"
+                        android:maxWidth="30dp"
+                        android:src="@drawable/ic_store" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Restaurante FATEC"
-                        android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="00.755.140/0001-70"
-                        android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+                        <TextView
+                            android:id="@+id/tvCVEmpresaTitulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+
+                        <TextView
+                            android:id="@+id/tvCVEmpresaSubtitulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnAlterarEmpresa"
+                <ImageButton
+                    android:id="@+id/imgbAlterarEmpresa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:text="Alterar" />
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/imgbMostrarEmpresa"
+                    android:background="?selectableItemBackground"
+                    android:contentDescription="@string/imgbAlterarEmpresaDescricao"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_edit_black_24dp" />
 
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/imgbMostrarDescricao"
+                <ImageButton
+                    android:id="@+id/imgbMostrarEmpresa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:background="#00FFFFFF"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackground"
+                    android:contentDescription="@string/imgbMostrarEmpresaDescricao"
                     android:src="@drawable/ic_keyboard_arrow_down_black_50dp" />
 
             </RelativeLayout>
@@ -83,99 +90,93 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:visibility="gone"
                 android:columnCount="2"
                 android:rowCount="7">
 
                 <TextView
-                    android:id="@+id/tvRazaoSocial"
+                    android:id="@+id/tvRazaoSocialT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="Razão Social:" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvRazaoSocialT" />
 
                 <TextView
-                    android:id="@+id/tvRazaoSocialDescricao"
+                    android:id="@+id/tvRazaoSocial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvNomeFantasiaT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FATEC RESTAURANT LTDA" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvNomeFantasiaT" />
 
                 <TextView
                     android:id="@+id/tvNomeFantasia"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="Nome Fantasia:" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/tvNomeFantasiaDescricao"
+                    android:id="@+id/tvCNPJT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Restaurante FATEC" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvCNPJT" />
 
                 <TextView
                     android:id="@+id/tvCNPJ"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="CNPJ:" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/tvCNPJDescricao"
+                    android:id="@+id/tvIET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00.755.140/0001-70" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvIET" />
 
                 <TextView
                     android:id="@+id/tvIE"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="IE:" />
+                    android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:id="@+id/tvIEDescricao"
+                    android:id="@+id/tvEnderecoT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="061.811.922.200" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvEnderecoT" />
 
                 <TextView
                     android:id="@+id/tvEndereco"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="Endereço:" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/tvEnderecoDescricao"
+                    android:id="@+id/tvTelefoneT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rua dos sem dente, numero 1, bairro joaquim,  Indaiatuab-SP" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvTelefoneT" />
 
                 <TextView
-                    android:id="@+id/tvTipoContato"
+                    android:id="@+id/tvTelefone"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="Telefone:" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/tvContato"
+                    android:id="@+id/tvCelularT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="(19) 3421-5678" />
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/tvCelularT" />
 
                 <TextView
-                    android:id="@+id/tvTipoContato2"
+                    android:id="@+id/tvCelular"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
-                    android:text="Celular:" />
-
-                <TextView
-                    android:id="@+id/tvContato2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="(19) 9090-7070" />
+                    android:layout_height="wrap_content" />
 
             </GridLayout>
 
