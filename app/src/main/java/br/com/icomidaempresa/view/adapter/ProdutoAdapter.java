@@ -32,9 +32,9 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.mProduto = mListPodutos.get(position);
-        holder.tvProdutoCodigo.setText(mListPodutos.get(position).getCodigo());
-        holder.tvProdutoNome.setText(mListPodutos.get(position).getNome());
-        holder.imgbProdutoEditar.setOnClickListener(view -> editarItem(position));
+        holder.tvProdutoCodigo.setText(holder.mProduto.getCodigo());
+        holder.tvProdutoNome.setText(holder.mProduto.getNome());
+        holder.imgbProdutoEditar.setOnClickListener(view -> editarItem(holder.mProduto, position));
         holder.imgbProdutoDeletar.setOnClickListener(view -> deletarItem(position));
     }
 
@@ -43,7 +43,7 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ViewHold
         return mListPodutos != null ? mListPodutos.size() : 0;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView tvProdutoCodigo;
         public final TextView tvProdutoNome;
         public final AppCompatImageButton imgbProdutoEditar;
@@ -59,10 +59,9 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ViewHold
         }
     }
 
-    private void editarItem(int position) {
-        Produto produtoClicado = mListPodutos.get(position);
-        produtoClicado.setNome("Alterei esse aqui XD");
-        notifyItemChanged(position);
+    private void editarItem(Produto produto, int position) {
+        produto.setNome("Alterei esse aqui XD");
+        notifyItemChanged(position, produto);
     }
 
     private void deletarItem(int position) {
