@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/imgbColaboradorEditar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCVColaboradorTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+
+                <TextView
+                    android:id="@+id/tvCVColaboradorSubtitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imgbColaboradorEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/imgbColaboradorDeletar"
+                android:background="?selectableItemBackground"
+                android:contentDescription="@string/imgbColaboradorEditarDescricao"
+                android:padding="16dp"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/imgbColaboradorDeletar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/imgbMostrarColaborador"
+                android:background="?selectableItemBackground"
+                android:contentDescription="@string/imgbColaboradorDeletarDescricao"
+                android:padding="16dp"
+                android:src="@drawable/ic_delete_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/imgbMostrarColaborador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackground"
+                android:contentDescription="@string/imgbMostrarColaboradorDescricao"
+                android:src="@drawable/ic_keyboard_arrow_down_black_50dp" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/glColaboradorDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="10dp"
+            android:rowCount="8"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvColaboradorNomeT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorNomeT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorRGT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorRGT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorRG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorCPFT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorCPFT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorCPF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorEnderecoT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorEnderecoT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorEndereco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorTelefoneT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorTelefoneT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorCelularT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorCelularT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorCelular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorEmailT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorEmailT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvColaboradorTipoT"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvColaboradorTipoT" />
+
+            <TextView
+                android:id="@+id/tvColaboradorTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

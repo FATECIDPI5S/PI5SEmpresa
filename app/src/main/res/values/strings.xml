@@ -84,6 +84,17 @@
 
     <!--FRAGMENT COLABORADORES-->
     <string name="title_fragment_colaboradores">Colaboradores</string>
+    <string name="imgbColaboradorEditarDescricao">Altere os dados do Colaborador</string>
+    <string name="imgbColaboradorDeletarDescricao">Exclua os dados do Colaborador</string>
+    <string name="imgbMostrarColaboradorDescricao">Exibir os dados do Colaborador</string>
+    <string name="tvColaboradorNomeT">Nome: </string>
+    <string name="tvColaboradorRGT">RG: </string>
+    <string name="tvColaboradorCPFT">CPF: </string>
+    <string name="tvColaboradorEnderecoT">Endereço: </string>
+    <string name="tvColaboradorTelefoneT">Telefone: </string>
+    <string name="tvColaboradorCelularT">Celular: </string>
+    <string name="tvColaboradorEmailT">Email: </string>
+    <string name="tvColaboradorTipoT">Tipo: </string>
 
     <!--FRAGMENT PRODUTOS-->
     <string name="title_fragment_produtos">Produtos</string>
