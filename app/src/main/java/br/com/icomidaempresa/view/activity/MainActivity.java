@@ -3,8 +3,11 @@ package br.com.icomidaempresa.view.activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,10 +29,17 @@ import br.com.icomidaempresa.view.fragment.SobreFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    FirebaseAuth firebaseAuth;
+    FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -41,8 +51,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         abrirDashBoard();
+        CarregarDadosLogin();
     }
 
     @Override
@@ -134,5 +144,17 @@ public class MainActivity extends AppCompatActivity
         mFragmentTransaction.replace(R.id.mainLayout, mFragment);
         mFragmentTransaction.commit();
         setTitle(R.string.title_fragment_dashboard);
+    }
+
+    private void CarregarDadosLogin(){
+        try {
+            TextView tvNavHeaderTitle = findViewById(R.id.tvNavHeaderTitle);
+
+            TextView tvNavHeaderSub = findViewById(R.id.tvNavHeaderSubtitle);
+            tvNavHeaderSub.setText(user.getEmail());
+
+        } catch (Exception ex) {
+
+        }
     }
 }
