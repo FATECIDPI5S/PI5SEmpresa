@@ -1,0 +1,123 @@
+{
+  "project_info": {
+    "project_number": "460327916455",
+    "firebase_url": "https://icomida-cbebd.firebaseio.com",
+    "project_id": "icomida-cbebd",
+    "storage_bucket": "icomida-cbebd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460327916455:android:6127b5ab00b34277",
+        "android_client_info": {
+          "package_name": "br.com.icomidaempresa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460327916455-pikdm3bu5m79hcpdrantmj05rc3cbmmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.icomidaempresa",
+            "certificate_hash": "9c04969d98d31e0fb18b4970f2c722af2ac0f666"
+          }
+        },
+        {
+          "client_id": "460327916455-irbj1upo73qtmpotkj683nocfqnl5ksl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.icomidaempresa",
+            "certificate_hash": "123d1936459f89b5ea1a3ddcfce1022215e2f8eb"
+          }
+        },
+        {
+          "client_id": "460327916455-9vkefao89qp4oerejc2ur03d0jdu1c0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.icomidaempresa",
+            "certificate_hash": "2563a7bb72c13c2599f3a570f428d198dae290b7"
+          }
+        },
+        {
+          "client_id": "460327916455-c56gcq91rtoerfd1118sfdl00e6rtn1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXoVk65YVUXPSfJk1-2JwlCT8UJZPqr3Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460327916455-c56gcq91rtoerfd1118sfdl00e6rtn1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460327916455:android:306318c94f26c295",
+        "android_client_info": {
+          "package_name": "br.com.pi5s.icomida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460327916455-a36aejhp2tj95c780d4lu3dbde57q4av.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.pi5s.icomida",
+            "certificate_hash": "2563a7bb72c13c2599f3a570f428d198dae290b7"
+          }
+        },
+        {
+          "client_id": "460327916455-chqnt2qobbeear880rfdep63tt649mfq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.pi5s.icomida",
+            "certificate_hash": "9c04969d98d31e0fb18b4970f2c722af2ac0f666"
+          }
+        },
+        {
+          "client_id": "460327916455-c56gcq91rtoerfd1118sfdl00e6rtn1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXoVk65YVUXPSfJk1-2JwlCT8UJZPqr3Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460327916455-c56gcq91rtoerfd1118sfdl00e6rtn1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
