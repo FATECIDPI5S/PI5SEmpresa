@@ -14,7 +14,7 @@
 
     <!-- ACTIVITY LOGIN-->
     <string name="btnEntrar">Entrar</string>
-    <string name="tvCadastrar">Ainda não tem conta? Crie uma.</string>
+    <string name="tvCadastrar">Ainda não tem conta? <b>Crie uma.</b></string>
 
     <!-- CONTENT SIGN_UP-->
     <string name="title_activity_sign_up">Cadastre-se</string>

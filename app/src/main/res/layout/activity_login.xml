@@ -53,6 +53,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:onClick="abrirSignUp"
-        android:text="@string/tvCadastrar"/>
+        android:text="@string/tvCadastrar"
+        android:textSize="16sp"/>
 
 </LinearLayout>
