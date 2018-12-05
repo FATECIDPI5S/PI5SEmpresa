@@ -101,8 +101,8 @@
     <!--FRAGMENT AMBIENTE MESA-->
     <string name="title_fragment_ambiente_mesa">Ambientes e Mesas</string>
 
-    <!--FRAGMENT MENU PRECO-->
-    <string name="title_fragment_menu_preco">Menu</string>
+    <!--FRAGMENT MENU-->
+    <string name="title_fragment_menu">Menu</string>
 
     <!--FRAGMENT CONFIGURACOES-->
     <string name="title_fragment_configuracoes">Configurações</string>

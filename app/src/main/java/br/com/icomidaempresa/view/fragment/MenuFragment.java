@@ -13,9 +13,9 @@ import br.com.icomidaempresa.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MenuPrecoFragment extends Fragment {
+public class MenuFragment extends Fragment {
 
-    public MenuPrecoFragment() {
+    public MenuFragment() {
         // Required empty public constructor
     }
 
@@ -23,6 +23,6 @@ public class MenuPrecoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_preco, container, false);
+        return inflater.inflate(R.layout.fragment_menu, container, false);
     }
 }

@@ -31,7 +31,7 @@ import br.com.icomidaempresa.view.fragment.ColaboradoresFragment;
 import br.com.icomidaempresa.view.fragment.ConfiguracoesFragment;
 import br.com.icomidaempresa.view.fragment.DashboardFragment;
 import br.com.icomidaempresa.view.fragment.EmpresaFragment;
-import br.com.icomidaempresa.view.fragment.MenuPrecoFragment;
+import br.com.icomidaempresa.view.fragment.MenuFragment;
 import br.com.icomidaempresa.view.fragment.ProdutosFragment;
 import br.com.icomidaempresa.view.fragment.SobreFragment;
 
@@ -127,8 +127,8 @@ public class MainActivity extends AppCompatActivity
             setTitle(R.string.title_fragment_ambiente_mesa);
 
         } else if (id == R.id.nav_menu_preco) {
-            mFragment = new MenuPrecoFragment();
-            setTitle(R.string.title_fragment_menu_preco);
+            mFragment = new MenuFragment();
+            setTitle(R.string.title_fragment_menu);
 
         } else if (id == R.id.nav_configuracoes) {
             mFragment = new ConfiguracoesFragment();
