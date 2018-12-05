@@ -4,11 +4,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,6 +25,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import br.com.icomidaempresa.R;
+import br.com.icomidaempresa.model.Administrador;
 import br.com.icomidaempresa.view.fragment.AmbienteMesaFragment;
 import br.com.icomidaempresa.view.fragment.ColaboradoresFragment;
 import br.com.icomidaempresa.view.fragment.ConfiguracoesFragment;
@@ -31,14 +40,13 @@ public class MainActivity extends AppCompatActivity
 
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
+    private FirebaseDatabase mFirebaseDatabase;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        firebaseAuth = FirebaseAuth.getInstance();
-        user = firebaseAuth.getCurrentUser();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,10 +57,16 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Initialize Firebase components
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+
+        AdicionarAdministradorListener();
         abrirDashBoard();
-        CarregarDadosLogin();
     }
 
     @Override
@@ -78,12 +92,10 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         //if (id == R.id.action_settings) {
         //    return true;
         //}
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -127,7 +139,7 @@ public class MainActivity extends AppCompatActivity
             setTitle(R.string.title_fragment_sobre);
         }
 
-        if(mFragment != null){
+        if (mFragment != null) {
             FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
             mFragmentTransaction.replace(R.id.mainLayout, mFragment);
             mFragmentTransaction.commit();
@@ -138,7 +150,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void abrirDashBoard(){
+    public void abrirDashBoard() {
         Fragment mFragment = new DashboardFragment();
         FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.mainLayout, mFragment);
@@ -146,15 +158,47 @@ public class MainActivity extends AppCompatActivity
         setTitle(R.string.title_fragment_dashboard);
     }
 
-    private void CarregarDadosLogin(){
+    public void AdicionarAdministradorListener() {
+        DatabaseReference mUsuarioDatabaseReference = mFirebaseDatabase.getReference().child("administrador");
+        mUsuarioDatabaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                Administrador admin = dataSnapshot.getValue(Administrador.class);
+                if (admin.getEmail().equals(user.getEmail())) {
+                    CarregarDadosLogin(admin);
+                }
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                Administrador admin = dataSnapshot.getValue(Administrador.class);
+                if (admin.getEmail().equals(user.getEmail())) {
+                    CarregarDadosLogin(admin);
+                }
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+    }
+
+    private void CarregarDadosLogin(Administrador admin) {
         try {
-            TextView tvNavHeaderTitle = findViewById(R.id.tvNavHeaderTitle);
-
-            TextView tvNavHeaderSub = findViewById(R.id.tvNavHeaderSubtitle);
-            tvNavHeaderSub.setText(user.getEmail());
-
+            TextView tvNavHeaderTitle = navigationView.findViewById(R.id.tvNavHeaderTitle);
+            tvNavHeaderTitle.setText(admin.getNome());
+            TextView tvNavHeaderSub = navigationView.findViewById(R.id.tvNavHeaderSubtitle);
+            tvNavHeaderSub.setText(admin.getEmail());
         } catch (Exception ex) {
-
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 }
