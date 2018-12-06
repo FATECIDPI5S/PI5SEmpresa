@@ -20,13 +20,16 @@ import br.com.icomidaempresa.model.Colaborador;
 public class ColaboradoresActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseDatabase iComidaDb = FirebaseDatabase.getInstance();
+    FirebaseUser user;
     DatabaseReference tbColaboradores = iComidaDb.getReference("funcionario");
+    DatabaseReference tbColaboradoresEmpresa = iComidaDb.getReference("empresa_funcionario");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colaboradores);
         firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
     }
 
     public void CadastrarColaboradores(View v){
@@ -60,8 +63,11 @@ public class ColaboradoresActivity extends AppCompatActivity {
             colaborador.setTelefone(telefone);
             colaborador.setCelular(celular);
             colaborador.setEmail(email);
-            tbColaboradores.push().setValue(colaborador);
+            String keyColaboradores = tbColaboradores.push().getKey();
+            tbColaboradores.child(keyColaboradores).setValue(colaborador);
             Toast.makeText(this, "Colaborador cadastrado com sucesso!", Toast.LENGTH_LONG).show();
+            tbColaboradoresEmpresa.child(user.getUid()).setValue(keyColaboradores);
+            Toast.makeText(this, "Colaborador vinculado a empresa!", Toast.LENGTH_LONG).show();
             /*firebaseAuth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this, task -> {
                 if (task.isSuccessful()) {
 
