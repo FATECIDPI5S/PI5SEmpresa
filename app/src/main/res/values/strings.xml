@@ -103,6 +103,7 @@
 
     <!--FRAGMENT MENU-->
     <string name="title_fragment_menu">Menu</string>
+    <string name="imgbAlterarStatusProdutoDescricao">Altere o status do Produto</string>
 
     <!--FRAGMENT CONFIGURACOES-->
     <string name="title_fragment_configuracoes">Configurações</string>
