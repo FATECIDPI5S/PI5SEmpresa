@@ -39,18 +39,17 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    public void CadastrarUsuario(View v){
-        try{
+    public void CadastrarUsuario(View v) {
+        try {
             EditText edtNome = findViewById(R.id.edtNome);
             EditText edtEmail = findViewById(R.id.edtEmail);
             EditText edtSenha = findViewById(R.id.edtSenha);
-            EditText edtSenhaNovament = findViewById(R.id.edtSenhaNovamente);
+            EditText edtSenhaNovamente = findViewById(R.id.edtSenhaNovamente);
 
             String nome = edtNome.getText().toString().trim();
             String email = edtEmail.getText().toString().trim();
             String senha = edtSenha.getText().toString().trim();
-            String senhaNovamente = edtSenha.getText().toString().trim();
-
+            String senhaNovamente = edtSenhaNovamente.getText().toString().trim();
 
             if (!senha.equals(senhaNovamente)) {
                 Toast.makeText(this, "As senhas informadas são diferentes", Toast.LENGTH_LONG).show();
@@ -58,7 +57,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             firebaseAuth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this, task -> {
-                if (task.isSuccessful()){
+                if (task.isSuccessful()) {
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     Administrador administrador = new Administrador();
                     administrador.setNome(nome);
@@ -67,16 +66,12 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(this, "Usuario cadastrado com sucesso!", Toast.LENGTH_LONG).show();
                     finish();
                     startActivity(new Intent(this, LoginActivity.class));
-                }
-                else {
+                } else {
                     Toast.makeText(this, "Usuário já cadastrado no sistema!", Toast.LENGTH_LONG).show();
                 }
             });
         } catch (Exception ex) {
-
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
-
-
-
 }
