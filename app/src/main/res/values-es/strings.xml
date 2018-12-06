@@ -24,7 +24,6 @@
     <!-- NAVIGATION DRAWER-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_dashboard">Visión general</string>
     <string name="grpMenuCadastro">Cadastro</string>
     <string name="nav_empresa">Catastro</string>
     <string name="nav_colaboradores">Empleados</string>
@@ -69,13 +68,10 @@
     <!--ACTIVITY MENU PRECO-->
     <string name="title_activity_menu_preco">Adicione colaboradores</string>
 
-    <!--FRAGMENT DASHBOARD-->
-    <string name="title_fragment_dashboard">Visión general</string>
-
     <!--FRAGMENT EMPRESA-->
     <string name="title_fragment_empresa">Empresa</string>
-    <string name="imgbAlterarEmpresaDescricao">Alterar os dados da Empresa</string>
-    <string name="imgbMostrarEmpresaDescricao">Exibir os dados da Empresa</string>
+    <string name="imgbAlterarEmpresaDescricao">Cambiar los datos de la empresa</string>
+    <string name="imgbMostrarEmpresaDescricao">Ver los datos de la empresa</string>
     <string name="tvRazaoSocialT">Razão Social: </string>
     <string name="tvNomeFantasiaT">Nome Fantasia: </string>
     <string name="tvCNPJT">CNPJ: </string>

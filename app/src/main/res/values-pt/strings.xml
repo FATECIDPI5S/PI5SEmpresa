@@ -24,7 +24,6 @@
     <!-- NAVIGATION DRAWER-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_dashboard">Visão Geral</string>
     <string name="grpMenuCadastro">Cadastro</string>
     <string name="nav_empresa">Empresa</string>
     <string name="nav_colaboradores">Colaboradores</string>
@@ -68,9 +67,6 @@
 
     <!--ACTIVITY MENU PRECO-->
     <string name="title_activity_menu_preco">Adicione colaboradores</string>
-
-    <!--FRAGMENT DASHBOARD-->
-    <string name="title_fragment_dashboard">Visão Geral</string>
 
     <!--FRAGMENT EMPRESA-->
     <string name="title_fragment_empresa">Empresa</string>

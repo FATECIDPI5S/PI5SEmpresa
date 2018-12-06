@@ -31,7 +31,6 @@ import br.com.icomidaempresa.model.Administrador;
 import br.com.icomidaempresa.view.fragment.AmbienteMesaFragment;
 import br.com.icomidaempresa.view.fragment.ColaboradoresFragment;
 import br.com.icomidaempresa.view.fragment.ConfiguracoesFragment;
-import br.com.icomidaempresa.view.fragment.DashboardFragment;
 import br.com.icomidaempresa.view.fragment.EmpresaFragment;
 import br.com.icomidaempresa.view.fragment.MenuFragment;
 import br.com.icomidaempresa.view.fragment.ProdutosFragment;
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity
         mFirebaseDatabase = FirebaseDatabase.getInstance();
 
         AdicionarAdministradorListener();
-        abrirDashBoard();
+        abrirEmpresa();
     }
 
     @Override
@@ -108,11 +107,7 @@ public class MainActivity extends AppCompatActivity
 
         Fragment mFragment = null;
 
-        if (id == R.id.nav_dashboard) {
-            mFragment = new DashboardFragment();
-            setTitle(R.string.title_fragment_dashboard);
-
-        } else if (id == R.id.nav_empresa) {
+        if (id == R.id.nav_empresa) {
             mFragment = new EmpresaFragment();
             setTitle(R.string.title_fragment_empresa);
 
@@ -154,12 +149,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void abrirDashBoard() {
-        Fragment mFragment = new DashboardFragment();
+    public void abrirEmpresa() {
+        Fragment mFragment = new EmpresaFragment();
         FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.mainLayout, mFragment);
         mFragmentTransaction.commit();
-        setTitle(R.string.title_fragment_dashboard);
+        setTitle(R.string.title_fragment_empresa);
     }
 
     public void AdicionarAdministradorListener() {

@@ -3,13 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:id="@+id/grpMenuDashboard" android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_dashboard"
-            android:icon="@drawable/ic_dashboard"
-            android:title="@string/nav_dashboard" />
-    </group>
-
     <group android:id="@+id/grpMenuCadastro">
         <item android:title="@string/grpMenuCadastro">
             <menu>
@@ -53,4 +46,5 @@
             android:icon="@drawable/ic_exit_to_app_grey_24dp"
             android:title="@string/nav_logout" />
     </group>
+
 </menu>
