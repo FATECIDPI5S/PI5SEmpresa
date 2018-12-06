@@ -43,11 +43,11 @@ public class ProdutosFragment extends Fragment {
         rvProduto.setLayoutManager(layoutManager);
 
         List<Produto> produtos = new ArrayList<>();
-        for (int i = 1; i <= 10; i ++){
+        for (int i = 1; i <= 11; i ++){
             Produto produto = new Produto();
             String codigoProduto = "";
 
-            for(int j = 1; j <= 9; j++){
+            for(int j = 1; j <= 10; j++){
                 codigoProduto += String.valueOf(j);
             }
             produto.setCodigo(codigoProduto);

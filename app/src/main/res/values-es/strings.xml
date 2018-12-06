@@ -24,8 +24,8 @@
     <!-- NAVIGATION DRAWER-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="grpMenuCadastro">Cadastro</string>
-    <string name="nav_empresa">Catastro</string>
+    <string name="grpMenuCadastro">Catastro</string>
+    <string name="nav_empresa">Negocios</string>
     <string name="nav_colaboradores">Empleados</string>
     <string name="nav_produtos">Productos</string>
     <string name="nav_ambiente_mesa">Ambientes y Mesas</string>
@@ -114,9 +114,9 @@
 
     <!--FRAGMENT CONFIGURACOES-->
     <string name="title_fragment_configuracoes">Ajustes</string>
-    <string name="tvConta">Conta</string>
+    <string name="tvConta">Cuenta</string>
     <string name="btnAlterarPerfil">Alterar Perfil</string>
-    <string name="btnAlterarSenha">Alterar Senha</string>
+    <string name="btnAlterarSenha">Cambia la contraseña</string>
     <string name="tvIdioma">Idioma</string>
     <string-array name="language_option">
         <item>Selecciona un idioma</item>

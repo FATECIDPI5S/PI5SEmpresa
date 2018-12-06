@@ -114,10 +114,10 @@
 
     <!--FRAGMENT CONFIGURACOES-->
     <string name="title_fragment_configuracoes">Settings</string>
-    <string name="tvConta">Conta</string>
-    <string name="btnAlterarPerfil">Alterar Perfil</string>
-    <string name="btnAlterarSenha">Alterar Senha</string>
-    <string name="tvIdioma">Idioma</string>
+    <string name="tvConta">Account</string>
+    <string name="btnAlterarPerfil">Edit Profile</string>
+    <string name="btnAlterarSenha">Change Password</string>
+    <string name="tvIdioma">Language</string>
     <string-array name="language_option">
         <item>Select a language</item>
         <item>Portuguese</item>

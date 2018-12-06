@@ -46,14 +46,14 @@ public class ColaboradoresFragment extends Fragment {
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         rvColaborador.setLayoutManager(layoutManager);
 
-        Colaborador colaborador = new Colaborador();
         List<Colaborador> colaboradores = new ArrayList<>();
         for (int i = 0; i < 11; i++)
         {
+            Colaborador colaborador = new Colaborador();
             colaborador.setNome("Colaborador " + String.valueOf(i));
 
             String rg = "";
-            for (int j = 0; j <= 9; j++){
+            for (int j = 1; j <= 10; j++){
                 rg += String.valueOf(j);
             }
             colaborador.setRG(rg);
