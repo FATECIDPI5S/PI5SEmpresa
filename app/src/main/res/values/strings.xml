@@ -33,6 +33,7 @@
     <string name="nav_menu_preco">Menu</string>
     <string name="nav_sobre">Sobre o aplicativo</string>
     <string name="nav_configuracoes">Configurações</string>
+    <string name="nav_logout">Sair</string>
 
     <!--ACTIVITY EMPRESA-->
     <string name="title_activity_empresa">Adicione sua Empresa</string>
@@ -112,9 +113,13 @@
     <string name="tvConta">Conta</string>
     <string name="btnAlterarPerfil">Alterar Perfil</string>
     <string name="btnAlterarSenha">Alterar Senha</string>
-    <string name="tvConfiguracoes">Configurações</string>
-    <string name="btnIdioma">Idioma</string>
-    <string name="btnSair">Sair</string>
+    <string name="tvIdioma">Idioma</string>
+    <string-array name="language_option">
+        <item>Selecione um idioma</item>
+        <item>Português</item>
+        <item>Inglês</item>
+        <item>Espanhol</item>
+    </string-array>
 
     <!--FRAGMENT SOBRE-->
     <string name="title_fragment_sobre">Sobre o Aplicativo</string>

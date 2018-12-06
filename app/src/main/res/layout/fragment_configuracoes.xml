@@ -45,13 +45,13 @@
         android:text="@string/btnAlterarSenha" />
 
     <TextView
-        android:id="@+id/tvConfiguracoes"
+        android:id="@+id/tvIdioma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="10dp"
-        android:text="@string/tvConfiguracoes"
+        android:text="@string/tvIdioma"
         android:textSize="20sp"/>
 
     <View
@@ -60,34 +60,16 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"/>
+        android:background="?android:attr/listDivider" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnIdioma"
+    <Spinner
+        android:id="@+id/spLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="@string/btnIdioma" />
-
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSair"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/btnSair" />
+        android:gravity="center_vertical"
+        android:entries="@array/language_option"/>
 
 </LinearLayout>

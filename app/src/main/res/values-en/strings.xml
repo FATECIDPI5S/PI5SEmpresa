@@ -1,3 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">iComidaEmpresa</string>
+
+    <!-- USADO EM VARIOS-->
+    <string name="edtEmail">E-mail</string>
+    <string name="edtSenha">Password</string>
+    <string name="edtSenhaNovamente">Digite novamente a senha</string>
+    <string name="edtNome">Nome</string>
+    <string name="btnAdicionar">Adicionar</string>
+    <string name="btnAlterar">Alterar</string>
+    <string name="btnVoltar">Voltar</string>
+    <string name="edtContato">Contato</string>
+    <string name="edtTipoContato">Tipo</string>
+    <string name="edtEndereco">Endereço</string>
+
+    <!-- ACTIVITY LOGIN-->
+    <string name="btnEntrar">Entrar</string>
+    <string name="tvCadastrar">Ainda não tem conta? <b>Crie uma.</b></string>
+
+    <!-- CONTENT SIGN_UP-->
+    <string name="title_activity_sign_up">Cadastre-se</string>
+    <string name="btnInscreverSe">Criar Conta</string>
+
+    <!-- NAVIGATION DRAWER-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_dashboard">DashBoard</string>
+    <string name="grpMenuCadastro">Register</string>
+    <string name="nav_empresa">Company</string>
+    <string name="nav_colaboradores">Employees</string>
+    <string name="nav_produtos">Products</string>
+    <string name="nav_ambiente_mesa">Environment and Tables</string>
+    <string name="nav_menu_preco">Menu</string>
+    <string name="nav_sobre">About the app</string>
+    <string name="nav_configuracoes">Settings</string>
+    <string name="nav_logout">Logout</string>
+
+    <!--ACTIVITY EMPRESA-->
+    <string name="title_activity_empresa">Adicione sua Empresa</string>
+    <string name="title_activity_empresa_alterar">Altere sua Empresa</string>
+    <string name="edtRazaoSocial">Razão Social</string>
+    <string name="edtNomeFantasia">Nome Fantasia</string>
+    <string name="edtCNPJ">CNPJ</string>
+    <string name="edtIE">IE</string>
+    <string name="edtTelefone">Telefone</string>
+    <string name="edtCelular">Celular</string>
+
+    <!--ACTIVITY COLABORADORES-->
+    <string name="title_activity_colaboradores">Adicione colaboradores</string>
+    <string name="edtRG">RG</string>
+    <string name="edtCPF">CPF</string>
+    <string name="rbGarcom">Garçom</string>
+    <string name="rbCozinha">Cozinha</string>
+
+    <!--ACTIVITY PRODUTOS-->
+    <string name="title_activity_produtos">Adicione Produtos</string>
+    <string name="edtCodigo">Código</string>
+    <string name="edtPrecoVenda">Preço de Venda</string>
+    <string name="cbProdutoAdicional">Produto Adicional?</string>
+
+    <!--ACTIVITY AMBIENTE-->
+    <string name="title_activity_ambiente">Adicione Ambientes</string>
+
+    <!--ACTIVITY MESA-->
+    <string name="title_activity_mesa">Adicione Mesas</string>
+
+    <!--ACTIVITY MENU PRECO-->
+    <string name="title_activity_menu_preco">Adicione colaboradores</string>
+
+    <!--FRAGMENT DASHBOARD-->
+    <string name="title_fragment_dashboard">Visão Geral</string>
+
+    <!--FRAGMENT EMPRESA-->
+    <string name="title_fragment_empresa">Empresa</string>
+    <string name="imgbAlterarEmpresaDescricao">Alterar os dados da Empresa</string>
+    <string name="imgbMostrarEmpresaDescricao">Exibir os dados da Empresa</string>
+    <string name="tvRazaoSocialT">Razão Social: </string>
+    <string name="tvNomeFantasiaT">Nome Fantasia: </string>
+    <string name="tvCNPJT">CNPJ: </string>
+    <string name="tvIET">IE: </string>
+    <string name="tvEnderecoT">Endereço: </string>
+    <string name="tvTelefoneT">Telefone: </string>
+    <string name="tvCelularT">Celular: </string>
+
+    <!--FRAGMENT COLABORADORES-->
+    <string name="title_fragment_colaboradores">Colaboradores</string>
+    <string name="imgbColaboradorEditarDescricao">Altere os dados do Colaborador</string>
+    <string name="imgbColaboradorDeletarDescricao">Exclua os dados do Colaborador</string>
+    <string name="imgbMostrarColaboradorDescricao">Exibir os dados do Colaborador</string>
+    <string name="tvColaboradorNomeT">Nome: </string>
+    <string name="tvColaboradorRGT">RG: </string>
+    <string name="tvColaboradorCPFT">CPF: </string>
+    <string name="tvColaboradorEnderecoT">Endereço: </string>
+    <string name="tvColaboradorTelefoneT">Telefone: </string>
+    <string name="tvColaboradorCelularT">Celular: </string>
+    <string name="tvColaboradorEmailT">Email: </string>
+    <string name="tvColaboradorTipoT">Tipo: </string>
+
+    <!--FRAGMENT PRODUTOS-->
+    <string name="title_fragment_produtos">Produtos</string>
+    <string name="imgbProdutoEditarDescricao">Edite seu Produto</string>
+    <string name="imgbProdutoDeletarDescricao">Exclua seu produto</string>
+
+    <!--FRAGMENT AMBIENTE MESA-->
+    <string name="title_fragment_ambiente_mesa">Ambientes e Mesas</string>
+
+    <!--FRAGMENT MENU-->
+    <string name="title_fragment_menu">Menu</string>
+    <string name="imgbAlterarStatusProdutoDescricao">Altere o status do Produto</string>
+
+    <!--FRAGMENT CONFIGURACOES-->
+    <string name="title_fragment_configuracoes">Configurações</string>
+    <string name="tvConta">Conta</string>
+    <string name="btnAlterarPerfil">Alterar Perfil</string>
+    <string name="btnAlterarSenha">Alterar Senha</string>
+    <string name="tvIdioma">Idioma</string>
+    <string-array name="language_option">
+        <item>Select a language</item>
+        <item>Portuguese</item>
+        <item>English</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <!--FRAGMENT SOBRE-->
+    <string name="title_fragment_sobre">Sobre o Aplicativo</string>
+    <string name="tvSobreApp">Aplicativo desenvolvido para o Projeto Disciplinar do 5º Semestre do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da faculdade de Tecnologia de Indaiatuba (FATEC-ID)</string>
+    <string name="tvParticipantesApp">Participantes do Projeto:</string>
+    <string name="tvTGabriel">Gabriel Vieira Santello</string>
+    <string name="tvSGabriel">Estudande na Fatec de Indaiatuba</string>
+    <string name="tvTGuilherme">Guilherme Pedrozo Abacherli</string>
+    <string name="tvSGuilherme">Estudande na Fatec de Indaiatuba</string>
+    <string name="tvTJean">Jean Carlos de Souza</string>
+    <string name="tvSJean">Estudande na Fatec de Indaiatuba</string>
+    <string name="tvTJefferson">Jefferson Lopes dos Santos Ribeiro</string>
+    <string name="tvSJefferson">Estudande na Fatec de Indaiatuba</string>
+    <string name="tvTMarina">Marina Estaropolis dos Reis</string>
+    <string name="tvSMarina">Estudande na Fatec de Indaiatuba</string>
 </resources>

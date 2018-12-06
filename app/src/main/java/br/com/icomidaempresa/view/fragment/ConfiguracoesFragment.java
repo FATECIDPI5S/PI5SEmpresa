@@ -1,43 +1,60 @@
 package br.com.icomidaempresa.view.fragment;
 
-
-import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import java.util.Locale;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import br.com.icomidaempresa.R;
-import br.com.icomidaempresa.view.activity.LoginActivity;
-import br.com.icomidaempresa.view.activity.MainActivity;
 
 public class ConfiguracoesFragment extends Fragment {
-    private FirebaseAuth firebaseAuth;
+
     public ConfiguracoesFragment() {
-        // Required empty public constructor
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_configuracoes, container, false);
-        Button btnSair = view.findViewById(R.id.btnSair);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        Spinner spLanguage = view.findViewById(R.id.spLanguage);
+        spLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position != 0) {
+                    Locale locale;
+                    switch (position) {
+                        case 1:
+                            locale = new Locale("pt");
+                            break;
+                        case 2:
+                            locale = new Locale("en");
+                            break;
+                        case 3:
+                            locale = new Locale("es");
+                            break;
+                        default:
+                            locale = new Locale("pt");
+                    }
+                    Locale.setDefault(locale);
+                    Configuration config = getContext().getResources().getConfiguration();
+                    config.locale = locale;
+                    getContext().getResources().updateConfiguration(config, getContext().getResources().getDisplayMetrics());
+                    getActivity().recreate();
+                }
+            }
 
-        btnSair.setOnClickListener(v -> {
-            FirebaseUser user = firebaseAuth.getCurrentUser();
-            if (user != null) {
-                firebaseAuth.signOut();
-                this.getActivity().finish();
-                startActivity( new Intent(getContext(), LoginActivity.class));
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
         return view;
     }
 }

@@ -1,5 +1,6 @@
 package br.com.icomidaempresa.view.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -138,6 +139,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_sobre) {
             mFragment = new SobreFragment();
             setTitle(R.string.title_fragment_sobre);
+        } else if (id == R.id.nav_logout) {
+            sair();
         }
 
         if (mFragment != null) {
@@ -205,5 +208,14 @@ public class MainActivity extends AppCompatActivity
         editor.putString("adminKey", adminKey);
         editor.apply();
         editor.commit();
+    }
+
+    private void sair() {
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null) {
+            firebaseAuth.signOut();
+            finish();
+            startActivity(new Intent(this, LoginActivity.class));
+        }
     }
 }
