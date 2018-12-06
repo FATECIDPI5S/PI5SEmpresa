@@ -4,14 +4,14 @@
     <!-- USADO EM VARIOS-->
     <string name="edtEmail">E-mail</string>
     <string name="edtSenha">Password</string>
-    <string name="edtSenhaNovamente">Digite novamente a senha</string>
-    <string name="edtNome">Nome</string>
-    <string name="btnAdicionar">Adicionar</string>
-    <string name="btnAlterar">Alterar</string>
-    <string name="btnVoltar">Voltar</string>
-    <string name="edtContato">Contato</string>
-    <string name="edtTipoContato">Tipo</string>
-    <string name="edtEndereco">Endereço</string>
+    <string name="edtSenhaNovamente">Enter the password again</string>
+    <string name="edtNome">Name</string>
+    <string name="btnAdicionar">Add</string>
+    <string name="btnAlterar">Update</string>
+    <string name="btnVoltar">Return</string>
+    <string name="edtContato">Contact</string>
+    <string name="edtTipoContato">Type</string>
+    <string name="edtEndereco">Address</string>
 
     <!-- ACTIVITY LOGIN-->
     <string name="btnEntrar">Entrar</string>
@@ -60,15 +60,17 @@
 
     <!--ACTIVITY AMBIENTE-->
     <string name="title_activity_ambiente">Adicione Ambientes</string>
+    <string name="edtAmbiente">Ambiente</string>
 
     <!--ACTIVITY MESA-->
     <string name="title_activity_mesa">Adicione Mesas</string>
+    <string name="edtMesa">Mesa</string>
 
     <!--ACTIVITY MENU PRECO-->
     <string name="title_activity_menu_preco">Adicione colaboradores</string>
 
     <!--FRAGMENT DASHBOARD-->
-    <string name="title_fragment_dashboard">Visão Geral</string>
+    <string name="title_fragment_dashboard">Dashboard</string>
 
     <!--FRAGMENT EMPRESA-->
     <string name="title_fragment_empresa">Empresa</string>

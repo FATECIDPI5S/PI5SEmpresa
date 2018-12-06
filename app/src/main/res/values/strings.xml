@@ -60,9 +60,11 @@
 
     <!--ACTIVITY AMBIENTE-->
     <string name="title_activity_ambiente">Adicione Ambientes</string>
+    <string name="edtAmbiente">Ambiente</string>
 
     <!--ACTIVITY MESA-->
     <string name="title_activity_mesa">Adicione Mesas</string>
+    <string name="edtMesa">Mesa</string>
 
     <!--ACTIVITY MENU PRECO-->
     <string name="title_activity_menu_preco">Adicione colaboradores</string>
