@@ -37,31 +37,25 @@ public class MenuFragment extends Fragment {
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         rvProduto.setLayoutManager(layoutManager);
 
-        Produto produto1 = new Produto();
-        produto1.setCodigo("12345ABCDE");
-        produto1.setNome("X-Bacon");
-        produto1.setStatus(true);
-
-        Produto produto2 = new Produto();
-        produto2.setCodigo("23456BCDEF");
-        produto2.setNome("X-Tudo");
-        produto2.setStatus(false);
-
         List<Produto> produtos = new ArrayList<>();
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        rvProduto.setAdapter(new MenuAdapter(produtos));
+        for (int i = 1; i <= 10; i ++){
+            Produto produto = new Produto();
+            String codigoProduto = "";
+            for(int j = 1; j <= 9; j++){
+                codigoProduto += String.valueOf(j);
+            }
+            produto.setCodigo(codigoProduto);
+            produto.setNome("Produto " + String.valueOf(i));
 
+            if ((i % 2) == 0)
+                produto.setStatus(true);
+            else
+                produto.setStatus(false);
+
+            produtos.add(produto);
+        }
+
+        rvProduto.setAdapter(new MenuAdapter(produtos));
         rvProduto.addItemDecoration(
                 new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
