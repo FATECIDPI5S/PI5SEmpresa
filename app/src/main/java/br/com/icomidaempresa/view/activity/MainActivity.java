@@ -1,5 +1,6 @@
 package br.com.icomidaempresa.view.activity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -166,28 +167,23 @@ public class MainActivity extends AppCompatActivity
                 Administrador admin = dataSnapshot.getValue(Administrador.class);
                 if (admin.getEmail().equals(user.getEmail())) {
                     CarregarDadosLogin(admin);
+                    salvarDadosAdmin(user.getEmail(), dataSnapshot.getKey());
                 }
             }
-
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 Administrador admin = dataSnapshot.getValue(Administrador.class);
                 if (admin.getEmail().equals(user.getEmail())) {
                     CarregarDadosLogin(admin);
+                    salvarDadosAdmin(user.getEmail(), dataSnapshot.getKey());
                 }
             }
-
             @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-            }
-
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {}
             @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-            }
-
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {}
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
+            public void onCancelled(@NonNull DatabaseError databaseError) {}
         });
     }
 
@@ -200,5 +196,14 @@ public class MainActivity extends AppCompatActivity
         } catch (Exception ex) {
             Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void salvarDadosAdmin(String email, String adminKey) {
+        SharedPreferences preferences = getSharedPreferences("admin_preferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("email", email);
+        editor.putString("adminKey", adminKey);
+        editor.apply();
+        editor.commit();
     }
 }
