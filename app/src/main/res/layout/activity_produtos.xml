@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/edtPrecoVenda"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
@@ -64,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="4dp"
+        android:onClick="cadastrarProduto"
         android:text="@string/btnAdicionar" />
 
     <com.google.android.material.button.MaterialButton
