@@ -19,9 +19,7 @@ import br.com.icomidaempresa.model.Administrador;
 import br.com.icomidaempresa.model.Colaborador;
 
 public class ColaboradoresActivity extends AppCompatActivity {
-    FirebaseAuth firebaseAuth;
     FirebaseDatabase iComidaDb = FirebaseDatabase.getInstance();
-    FirebaseUser user;
     DatabaseReference tbColaboradores = iComidaDb.getReference("funcionario");
     DatabaseReference tbColaboradoresAdmin = iComidaDb.getReference("admin_funcionario");
 
@@ -29,8 +27,6 @@ public class ColaboradoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colaboradores);
-        firebaseAuth = FirebaseAuth.getInstance();
-        user = firebaseAuth.getCurrentUser();
     }
 
     public void CadastrarColaboradores(View v){
@@ -67,17 +63,14 @@ public class ColaboradoresActivity extends AppCompatActivity {
             String keyColaboradores = tbColaboradores.push().getKey();
             tbColaboradores.child(keyColaboradores).setValue(colaborador);
             Toast.makeText(this, "Colaborador cadastrado com sucesso!", Toast.LENGTH_LONG).show();
-            tbColaboradoresAdmin.child(pegarAdminKey()).setValue(keyColaboradores);
+            tbColaboradoresAdmin.child(pegarAdminKey()).child(keyColaboradores).setValue(true);
             Toast.makeText(this, "Colaborador vinculado a empresa!", Toast.LENGTH_LONG).show();
             /*firebaseAuth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this, task -> {
                 if (task.isSuccessful()) {
-
                 } else {
                     Toast.makeText(this, "Usuário já cadastrado no sistema!", Toast.LENGTH_LONG).show();
                 }
             });*/
-
-
         } catch (Exception ex) {
             Log.d("COLABORADORES", ex.getMessage());
         }
