@@ -42,29 +42,20 @@ public class ProdutosFragment extends Fragment {
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         rvProduto.setLayoutManager(layoutManager);
 
-        Produto produto1 = new Produto();
-        produto1.setCodigo("12345ABCDE");
-        produto1.setNome("X-Bacon");
-
-        Produto produto2 = new Produto();
-        produto2.setCodigo("23456BCDEF");
-        produto2.setNome("X-Tudo");
-
         List<Produto> produtos = new ArrayList<>();
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        produtos.add(produto1);
-        produtos.add(produto2);
-        rvProduto.setAdapter(new ProdutoAdapter(produtos));
+        for (int i = 1; i <= 10; i ++){
+            Produto produto = new Produto();
+            String codigoProduto = "";
 
+            for(int j = 1; j <= 9; j++){
+                codigoProduto += String.valueOf(j);
+            }
+            produto.setCodigo(codigoProduto);
+            produto.setNome("Produto " + String.valueOf(i));
+            produtos.add(produto);
+        }
+
+        rvProduto.setAdapter(new ProdutoAdapter(produtos));
         rvProduto.addItemDecoration(
                 new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
