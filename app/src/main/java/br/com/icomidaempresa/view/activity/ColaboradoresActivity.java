@@ -1,6 +1,7 @@
 package br.com.icomidaempresa.view.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +23,7 @@ public class ColaboradoresActivity extends AppCompatActivity {
     FirebaseDatabase iComidaDb = FirebaseDatabase.getInstance();
     FirebaseUser user;
     DatabaseReference tbColaboradores = iComidaDb.getReference("funcionario");
-    DatabaseReference tbColaboradoresEmpresa = iComidaDb.getReference("empresa_funcionario");
+    DatabaseReference tbColaboradoresAdmin = iComidaDb.getReference("admin_funcionario");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,7 @@ public class ColaboradoresActivity extends AppCompatActivity {
             String keyColaboradores = tbColaboradores.push().getKey();
             tbColaboradores.child(keyColaboradores).setValue(colaborador);
             Toast.makeText(this, "Colaborador cadastrado com sucesso!", Toast.LENGTH_LONG).show();
-            tbColaboradoresEmpresa.child(user.getUid()).setValue(keyColaboradores);
+            tbColaboradoresAdmin.child(pegarAdminKey()).setValue(keyColaboradores);
             Toast.makeText(this, "Colaborador vinculado a empresa!", Toast.LENGTH_LONG).show();
             /*firebaseAuth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this, task -> {
                 if (task.isSuccessful()) {
@@ -75,6 +76,8 @@ public class ColaboradoresActivity extends AppCompatActivity {
                     Toast.makeText(this, "Usuário já cadastrado no sistema!", Toast.LENGTH_LONG).show();
                 }
             });*/
+
+
         } catch (Exception ex) {
             Log.d("COLABORADORES", ex.getMessage());
         }
@@ -82,5 +85,10 @@ public class ColaboradoresActivity extends AppCompatActivity {
 
     public void voltar(View v){
         finish();
+    }
+
+    private String pegarAdminKey() {
+        SharedPreferences preferences = getSharedPreferences("admin_preferences", MODE_PRIVATE);
+        return preferences.getString("adminKey", "");
     }
 }
