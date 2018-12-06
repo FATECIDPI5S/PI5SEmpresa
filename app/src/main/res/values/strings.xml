@@ -7,6 +7,7 @@
     <string name="edtSenhaNovamente">Digite novamente a senha</string>
     <string name="edtNome">Nome</string>
     <string name="btnAdicionar">Adicionar</string>
+    <string name="btnAlterar">Alterar</string>
     <string name="btnVoltar">Voltar</string>
     <string name="edtContato">Contato</string>
     <string name="edtTipoContato">Tipo</string>
@@ -35,6 +36,7 @@
 
     <!--ACTIVITY EMPRESA-->
     <string name="title_activity_empresa">Adicione sua Empresa</string>
+    <string name="title_activity_empresa_alterar">Altere sua Empresa</string>
     <string name="edtRazaoSocial">Razão Social</string>
     <string name="edtNomeFantasia">Nome Fantasia</string>
     <string name="edtCNPJ">CNPJ</string>

@@ -1,7 +1,8 @@
 package br.com.icomidaempresa.view.fragment;
 
-
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +12,24 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import br.com.icomidaempresa.R;
 import br.com.icomidaempresa.model.Empresa;
 import br.com.icomidaempresa.view.activity.EmpresaActivity;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class EmpresaFragment extends Fragment {
+    private FirebaseDatabase mFirebaseDatabase;
     GridLayout glEmpresaDescricao;
     FloatingActionButton fabEmpresa;
     ImageButton imgbMostrarEmpresa;
@@ -36,6 +43,7 @@ public class EmpresaFragment extends Fragment {
     TextView tvEndereco;
     TextView tvTelefone;
     TextView tvCelular;
+    String empresaKeyVinculada;
 
     public EmpresaFragment() {
     }
@@ -43,6 +51,8 @@ public class EmpresaFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_empresa, container, false);
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
 
         glEmpresaDescricao = view.findViewById(R.id.glEmpresaDescricao);
         fabEmpresa = view.findViewById(R.id.fabEmpresa);
@@ -62,13 +72,24 @@ public class EmpresaFragment extends Fragment {
         imgbMostrarEmpresa.setOnClickListener(this::verificarDescricao);
         imgbAlterarEmpresa.setOnClickListener(this::alterarEmpresa);
 
-        popularEmpresa();
+        verificarEmpresaVinculada();
+        AdicionarEmpresaListener();
 
         return view;
     }
 
     private void alterarEmpresa(View view) {
-        startActivity(new Intent(getContext(), EmpresaActivity.class));
+        Intent intent = new Intent(getContext(), EmpresaActivity.class);
+        intent.putExtra("update", true);
+        intent.putExtra("empresaKey", empresaKeyVinculada);
+        intent.putExtra("tvRazaoSocial", tvRazaoSocial.getText());
+        intent.putExtra("tvNomeFantasia", tvNomeFantasia.getText());
+        intent.putExtra("tvCNPJ", tvCNPJ.getText());
+        intent.putExtra("tvIE", tvIE.getText());
+        intent.putExtra("tvEndereco", tvEndereco.getText());
+        intent.putExtra("tvTelefone", tvTelefone.getText());
+        intent.putExtra("tvCelular", tvCelular.getText());
+        startActivity(intent);
     }
 
     private void verificarDescricao(View view) {
@@ -85,16 +106,68 @@ public class EmpresaFragment extends Fragment {
         startActivity(new Intent(getContext(), EmpresaActivity.class));
     }
 
-    private void popularEmpresa() {
-        Empresa empresa = new Empresa();
-        empresa.setRazaoSocial("FATEC RESTAURANT LTDA");
-        empresa.setNomeFantasia("Restaurante FATEC");
-        empresa.setCNPJ("00.755.140/0001-70");
-        empresa.setIE("061.811.922.200");
-        empresa.setEndereco("R. Dom Pedro I, 65 - Cidade Nova I, Indaiatuba - SP, 13334-100");
-        empresa.setTelefone("(19) 3885-1923");
-        empresa.setCelular("(19) 99170-7070");
+    private void verificarEmpresaVinculada() {
+        DatabaseReference mAdminEmpresaDatabaseReference = mFirebaseDatabase.getReference().child("admin_empresa");
+        mAdminEmpresaDatabaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                if (dataSnapshot.getKey().equals(pegarAdminKey())) {
+                    empresaKeyVinculada = dataSnapshot.getValue().toString();
+                    fabEmpresa.hide();
+                } else {
+                    fabEmpresa.show();
+                }
+            }
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                if (dataSnapshot.getKey().equals(pegarAdminKey())) {
+                    empresaKeyVinculada = dataSnapshot.getValue().toString();
+                    fabEmpresa.hide();
+                } else {
+                    fabEmpresa.show();
+                }
+            }
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {}
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {}
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {}
+        });
+    }
 
+    private String pegarAdminKey() {
+        SharedPreferences preferences = this.getActivity().getSharedPreferences("admin_preferences", Context.MODE_PRIVATE);
+        return preferences.getString("adminKey", "");
+    }
+
+    private void AdicionarEmpresaListener() {
+        DatabaseReference mEmpresaDatabaseReference = mFirebaseDatabase.getReference().child("empresa");
+        mEmpresaDatabaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                if (dataSnapshot.getKey().equals(empresaKeyVinculada)) {
+                    Empresa empresa = dataSnapshot.getValue(Empresa.class);
+                    atualizarCardViewEmpresa(empresa);
+                }
+            }
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                if (dataSnapshot.getKey().equals(empresaKeyVinculada)) {
+                    Empresa empresa = dataSnapshot.getValue(Empresa.class);
+                    atualizarCardViewEmpresa(empresa);
+                }
+            }
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {}
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {}
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {}
+        });
+    }
+
+    private void atualizarCardViewEmpresa(Empresa empresa) {
         tvCVEmpresaTitulo.setText(empresa.getNomeFantasia());
         tvCVEmpresaSubtitulo.setText(empresa.getCNPJ());
         tvRazaoSocial.setText(empresa.getRazaoSocial());
