@@ -101,13 +101,19 @@
 
     <!--FRAGMENT AMBIENTE MESA-->
     <string name="title_fragment_ambiente_mesa">Ambientes e Mesas</string>
+    <string-array name="spAmbiente">
+        <item>Selecione um Ambiente</item>
+        <item>Térreo</item>
+        <item>Primeiro Andar</item>
+        <item>Segundo Andar</item>
+    </string-array>
 
     <!--FRAGMENT MENU-->
     <string name="title_fragment_menu">Menu</string>
     <string name="imgbAlterarStatusProdutoDescricao">Altere o status do Produto</string>
 
     <!--FRAGMENT CONFIGURACOES-->
-    <string name="title_fragment_configuracoes">Configurações</string>
+    <string name="title_fragment_configuracoes">Settings</string>
     <string name="tvConta">Conta</string>
     <string name="btnAlterarPerfil">Alterar Perfil</string>
     <string name="btnAlterarSenha">Alterar Senha</string>

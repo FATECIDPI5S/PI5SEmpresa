@@ -5,6 +5,660 @@
     android:layout_height="match_parent"
     tools:context=".AmbienteMesaFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginTop="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Térreo"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Primeiro Andar"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar2"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 3" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Primeiro Andar"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar3"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 4" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Térreo"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar4"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 5" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Segundo Andar"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar5"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 6" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Térreo"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar6"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar7"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 7" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Térreo"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar7"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Primeiro Andar"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar8"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar9"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 9" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Térreo"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar9"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar10"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 10" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Térreo"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar10"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/imgbProdutoEditar11"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
+                            android:text="Codigo 11" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle"
+                            android:text="Segundo Andar"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoEditar11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imgbProdutoDeletar11"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoEditarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_edit_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbProdutoDeletar11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="@string/imgbProdutoDeletarDescricao"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_delete_black_24dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAmbiente"
         android:layout_width="wrap_content"
